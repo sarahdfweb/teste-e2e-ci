@@ -1,20 +1,40 @@
 pipeline {
     agent any
+    
     stages {
-        stage('Step 1') {
+        stage('Clonar repositório') {
             steps {
-                echo 'Script 1'
+                git(url: 'https://github.com/sarahdfweb/teste-e2e-ci.git', branch: 'main')
             }
         }
-        stage('Step 2') {
+        
+        stage('Instalar dependências') {
             steps {
-                echo 'Script 2'
+                sh 'npm install'
             }
         }
-        stage('Step 3') {
+        
+        stage('Executar testes') {
             steps {
-                echo 'Script 3'
+                sh 'npm test'
             }
+        }
+    }
+    
+    post {
+        always {
+            // Etapas a serem executadas sempre, independentemente do resultado
+            echo 'Concluído o processo de integração contínua.'
+        }
+        
+        success {
+            // Etapas a serem executadas apenas se a construção for bem-sucedida
+            echo 'A integração foi bem-sucedida. Parabéns!'
+        }
+        
+        failure {
+            // Etapas a serem executadas somete se a construção falhar
+            echo 'A integração falhou. Verifique os logs para obter mais informações.'
         }
     }
 }
