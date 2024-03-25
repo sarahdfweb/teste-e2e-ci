@@ -4,7 +4,7 @@ Este projeto foi clonado para fins de treinamento de Integração Contínua, com
 
 ## Objetivo
 
-O objetivo deste projeto é fornecer uma base para explorar e experimentar com os conceitos de Integração Contínua, utilizando Jenkins para automatizar o processo de construção, teste e implantação de aplicativos. Além disso, utiliza Docker para encapsular o ambiente de desenvolvimento e Cypress para testes automatizados de ponta a ponta.
+O objetivo deste projeto é fornecer uma base para explorar e experimentar com os conceitos de Integração Contínua, utilizando Jenkins para automatizar o processo de construção. Além disso, utiliza Docker para encapsular o ambiente de desenvolvimento e Cypress para testes automatizados de ponta a ponta.
 
 ## Ferramentas Utilizadas
 
