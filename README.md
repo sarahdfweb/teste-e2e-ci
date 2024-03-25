@@ -1,2 +1,3 @@
-# Projeto clonado para treinamento de Integração Contínua com Jenkins, Docker e Cypress.
+# Projeto clonado para treinamento de Integração Contínua 
+## Usando Jenkins, Docker e Cypress.
 
